@@ -76,6 +76,23 @@
         \caption{AWS Educate Dashboard.}
     \end{figure}\newpage
 
+    \noindent
+    If you've chosen to use a personal/business plan, once inserted a pay card number, and confirmed it with a 1\$ fee you should have this screen:
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=\textwidth]{img/sing-up.png}
+    \end{figure}
+
+    \noindent
+    On this figure, you can also see the various plans offered. To compare plans and pricing examples, you can visit this page: \href{https://aws.amazon.com/premiumsupport/plans/}{link}.\newline
+
+    \noindent
+    Anyway, choosing a Free plan will automatic start an AWS Free Tier (\href{https://aws.amazon.com/free/terms/}{terms}). The 12 Month Free Tier is only available to new AWS customers, and is available for 12 months following your AWS sign-up date.
+
+    If you have not used the AWS resources provided under an Offer during the previous 3 months, we may reclaim those AWS resources after giving you 30 days’ notice. Even if your AWS resources are reclaimed, you may continue to participate in Offers using new AWS resources.
+
+    \newpage
+
     \subsection{Getting Started}
 
     The first thing to do to understand how AWS works is read the Getting Started guide: \url{https://aws.amazon.com/getting-started/}. In this site, you can find some useful guides that explain cloud functions and others Amazon products.\newline
@@ -111,8 +128,55 @@
     F1 instances provide diverse development environments: from low-level hardware developers to software developers who are more comfortable with C/C++ and openCL environments (see more on \ref{sec: development kit} par.).\newline
 
     \noindent
-    Once your FPGA design is complete, you can register it as an Amazon FPGA Image (AFI), and deploy it to your F1 instance in just a few clicks. You can reuse your AFIs as many times as you like, and across as many F1 instances as you like. There is no software charge for the development tools when using the FPGA developer AMI and you can program the FPGAs on your F1 instance as many times as you like with no additional fees.
-    
+    Once your FPGA design is complete, you can register it as an Amazon FPGA Image (AFI), and deploy it to your F1 instance in just a few clicks. You can reuse your AFIs as many times as you like, and across as many F1 instances as you like. There is no software charge for the development tools when using the FPGA developer AMI and you can program the FPGAs on your F1 instance as many times as you like with no additional fees.\newline
+
+    \noindent
+    Instances Features:
+    \begin{itemize}
+        \item High frequency Intel Xeon Scalable Processors (Broadwell E5-2686 v4)
+        \item NVMe SSD Storage
+        \item Support for Enhanced Networking
+    \end{itemize}
+    FPGA Features:
+    \begin{itemize}
+        \item Xilinx Virtex UltraScale+ VU9P FPGAs
+        \item 64 GiB of ECC-protected memory on 4x DDR4
+        \item Dedicated PCI-Express x16 interface
+        \item Approximately 2.5 million logic elements
+        \item Approximately 6,800 Digital Signal Processing (DSP) engines
+        \item FPGA Developer AMI (see \ref{sec: FPGA Developer AMI})
+    \end{itemize}\newpage
+
+    \begin{table}[!htp]
+        \centering
+        \begin{tabular}{@{} l p{4em} p{4em} p{4em} p{4em} p{6em} @{}}
+            \toprule
+            \textbf{Instance} & \textbf{FPGAs} & \textbf{vCPU} & \textbf{Memory (GiB)} & \textbf{Instance Storage (GB)} & \textbf{Networking Performance (Gbps)***} \\
+            \midrule
+            \texttt{f1.2xlarge}     & 1 & 8 & 122 & $1 \times 470$ & Up to 10 \\
+            \texttt{f1.4xlarge}     & 2 & 16 & 244 & $1 \times 940$ & Up to 10 \\
+            \texttt{f1.16xlarge}    & 8 & 64 & 976 & $4 \times 940$ & 25 \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    For \texttt{f1.16xlarge} instances, the dedicated PCI-e fabric lets the FPGAs share the same memory space and communicate with each other across the fabric at up to 12 Gbps in each direction.\newline
+
+    \noindent
+    All instances have the following specs:
+    \begin{itemize}
+        \item 2.3 GHz (base) and 2.7 GHz (turbo) Intel Xeon E5-2686 v4 Processor
+
+        \item \href{https://aws.amazon.com/ec2/instance-types/#Intel}{Intel AVX*, Intel AVX2*, Intel Turbo}
+
+        \item \href{https://aws.amazon.com/ec2/instance-types/#EBS}{EBS Optimized}
+
+        \item \href{https://aws.amazon.com/ec2/details/#enhanced-networking}{Enhanced Networking*}
+    \end{itemize}
+    * AVX and AVX2 are only available on instances launched with HVM AMIs.\newline
+
+    \noindent
+    *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html}{instance network bandwidth}.
+
     \longline
 
     \subsection{Development Kit}\label{sec: development kit}
@@ -131,7 +195,7 @@
 
         \item The FPGA Software Development Kit (SDK, \href{https://github.com/aws/aws-fpga#runtime-tools-sdk}{shortcut url}) environment allows developing accelerations using C/C++/OpenCL code with no hardware knowledge needed.
     \end{itemize}
-    Again, this kit is \textbf{essential to develop fast FPGA for the EC2 F1 instances}.
+    Again, this kit is \textbf{essential to develop fast FPGA for the EC2 F1 instances}.\newpage
 
     \subsection{FPGA Developer AMI}\label{sec: FPGA Developer AMI}
 
@@ -149,9 +213,7 @@
     Typical Total Price (updated on 17th October 2023): \$0.796/hr.\newline
 
     \noindent
-    See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}
-
-    \longline
+    See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}\newpage
 
     \subsection{Some interesting blog posts \& articles}
 
@@ -165,5 +227,7 @@
         \item \href{https://aws.amazon.com/blogs/compute/bringing-datacenter-scale-hardware-software-co-design-to-the-cloud-with-firesim-and-amazon-ec2-f1-instances/}{Bringing Datacenter-Scale Hardware-Software Co-design to the Cloud with FireSim and Amazon EC2 F1 Instances} by Mia Champion
 
         \item \href{https://aws.amazon.com/blogs/compute/accelerating-precision-medicine-at-scale/}{Accelerating Precision Medicine at Scale} by Aaron Friedman and Angel Pizarro
-    \end{itemize}
+    \end{itemize}\newpage
+
+    \section{AWS EC2 FPGA Development Kit}
 \end{document}
