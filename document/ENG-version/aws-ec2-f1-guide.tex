@@ -1,0 +1,69 @@
+\documentclass[a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}  		% english date format
+\usepackage{textcomp, gensymb}      % to avoid some warnings
+\usepackage{graphicx}				% image management
+\usepackage{amsfonts}               % math fonts
+\usepackage{booktabs}				% improve tables
+\usepackage{amsmath}				% another math. pack.
+% \usepackage{mathtools}				% underline under eq.
+% \usepackage{stmaryrd} 				% for '\llbracket' and '\rrbracket'
+% \usepackage{amsthm}					% better theorems
+\usepackage{enumitem}				% list management
+\usepackage{pifont}					% 'cute' bullet points
+% \usepackage{cancel}					% cancel math expressions
+\usepackage{caption}				% custom caption
+\usepackage[]{mdframed}				% text box
+\usepackage{multirow}				% table rows
+\usepackage{gensymb}				% degree symbol
+\usepackage[x11names]{xcolor}		% RGB colors pack.
+\usepackage{tcolorbox}				% color box text
+
+% draw a frame around given text
+\newcommand{\framedtext}[1]{%
+	\par%
+	\noindent\fbox{%
+		\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{#1}%
+	}%
+}
+
+% hypertext
+\usepackage{xcolor}
+\usepackage[linkcolor=black, citecolor=blue, urlcolor=cyan]{hyperref}
+\hypersetup{
+	colorlinks=true
+}
+
+% sorry, I don't use a US keyboard
+\newcommand{\dquotes}[1]{``#1''}
+\newcommand{\longline}{\noindent\rule{\textwidth}{0.4pt}}
+
+\begin{document}
+    \author{VR443470 - Valentini Andrea}
+    \title{University of Verona \\
+    \:\\
+    AWS: EC2 F1 - Guide}
+    \date{Last Update: \today}
+
+    \maketitle
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+
+    \section{Introduction}
+
+    This guide was made to help some developers, and not, to understand how-to-use an AWS's product: EC2 F1. Note: obviously this is an unofficial guide.
+    
+    \subsection{Register a new account}
+
+    From this site you can register on the AWS platform: \url{https://aws.amazon.com/}. You can create an account choosing two possibility plans:
+    \begin{itemize}
+        \item Personal account, with some limitations (see more: \href{https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all}{here});
+
+        \item Business account, but attention because you need to register a payment card (see more: \href{https://aws.amazon.com/premiumsupport/plans/}{here}).
+    \end{itemize}
+    Although, there is an opportunity to students, and anyone else has an institutional e-mail, to register on the AWS Educate platform\footnote{FAQ: \url{https://www.awseducate.com/registration/s/faqs?language=en_US}}: \url{https://aws.amazon.com/education/awseducate/}. This plan allows you to access to AWS Educate lab, which provides access to the AWS Console to enable practical application of concepts without the need for credits (in summary, more resources without having to pay).
+\end{document}
