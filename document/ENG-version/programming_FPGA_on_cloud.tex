@@ -42,7 +42,7 @@
     \author{VR443470 - Valentini Andrea}
     \title{University of Verona \\
     \:\\
-    AWS: EC2 F1 - Guide}
+    Programming FPGA on cloud - Guide}
     \date{Last Update: \today}
 
     \maketitle
@@ -55,7 +55,7 @@
 
     \section{Introduction to AWS}
 
-    This guide was made to help some developers, and not, to understand how-to-use an AWS's product: EC2 F1. Note: obviously this is an unofficial guide.
+    This guide is designed to help some developers, and not, to explore the cloud technologies to learn how to program an FPGA (on cloud).
 
     \longline
     
@@ -111,7 +111,7 @@
     \noindent
     On the left side you can see all resources created and recently visited; at the top you can see all hypertext link that can help you to start.\newpage
 
-    \section{Introduction to Amazon EC2 F1 Instances}
+    \section{Amazon EC2 F1 Instances}
 
     \subsection{Description}
 
@@ -158,6 +158,8 @@
             \texttt{f1.16xlarge}    & 8 & 64 & 976 & $4 \times 940$ & 25 \\
             \bottomrule
         \end{tabular}
+        \caption{The specifications of each type of \emph{EC2 F1 Instances}.}
+        \label{tab: the specifications of each type of EC2 F1 Instances}
     \end{table}
     For \texttt{f1.16xlarge} instances, the dedicated PCI-e fabric lets the FPGAs share the same memory space and communicate with each other across the fabric at up to 12 Gbps in each direction.\newline
 
@@ -207,13 +209,26 @@
     \noindent
     As mentioned above, developers can deploy the FPGA Developer AMI on an Amazon EC2 instance and quickly provision the resources they need to write and debug FPGA designs in the cloud. The FPGA Developer AMI is provided at no additional charge to Amazon EC2 users.\newline
 
-    
-
     \noindent
     Typical Total Price (updated on 17th October 2023): \$0.796/hr.\newline
 
     \noindent
     See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}\newpage
+
+    \subsection{The reason why you shouldn't choose the EC2 F1 Instances (for educational purposes)}
+
+    The reason why you shouldn't choose the EC2 F1 Instances is quite simple: they're too expensive. If you are a student or a professor, this option is too much for a number of reasons:
+    \begin{enumerate}
+        \item As mentioned in table \ref{tab: the specifications of each type of EC2 F1 Instances} on page \pageref{tab: the specifications of each type of EC2 F1 Instances}, the computational power of each type of F1 is too much for a beginner that is learning how to program an FPGA. It's like saying: \dquotes{I don't have a driving licence, so I should drive a Ferrari to train for the exam}.
+
+        \item Although you can create a free account with 750 hours on EC2, you can't get the access to an EC2 F1 Instance(s) unless you pay a huge amount of money:
+        \begin{figure}[!htp]
+            \centering
+            \includegraphics[width=.6\textwidth]{img/f1_costs.png}
+        \end{figure}
+    \end{enumerate}
+
+    \longline
 
     \subsection{Some interesting blog posts \& articles}
 
@@ -227,7 +242,5 @@
         \item \href{https://aws.amazon.com/blogs/compute/bringing-datacenter-scale-hardware-software-co-design-to-the-cloud-with-firesim-and-amazon-ec2-f1-instances/}{Bringing Datacenter-Scale Hardware-Software Co-design to the Cloud with FireSim and Amazon EC2 F1 Instances} by Mia Champion
 
         \item \href{https://aws.amazon.com/blogs/compute/accelerating-precision-medicine-at-scale/}{Accelerating Precision Medicine at Scale} by Aaron Friedman and Angel Pizarro
-    \end{itemize}\newpage
-
-    \section{AWS EC2 FPGA Development Kit}
+    \end{itemize}
 \end{document}
