@@ -268,7 +268,10 @@
     \end{table}
 
     \noindent
-    You can visit the price page for more details: \href{https://aws.amazon.com/ec2/pricing/}{click here}. Although Amazon says you can try EC2 F1 for free, this is untrue. Amazon allows you to use (for 750 hours) a virtual instance (a virtual resource) to give you a taste. Instead, Amazon EC2 F1 are dedicated instances (FPGA).
+    You can visit the price page for more details: \href{https://aws.amazon.com/ec2/pricing/}{click here}. Although Amazon says you can try EC2 F1 for free, this is untrue. Amazon allows you to use (for 750 hours) a virtual instance (a virtual resource) to give you a taste. Instead, Amazon EC2 F1 are dedicated instances (FPGA).\newline
+
+    \noindent
+    At least you can estimate the costs with the \href{https://calculator.aws/#/createCalculator/ec2-enhancement}{AWS Pricing Calculator}.
 
     \longline
 
@@ -304,7 +307,133 @@
     Typical Total Price (updated on 17th October 2023): \$0.796/hr.\newline
 
     \noindent
-    See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}\newpage
+    See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}.\newpage
+    
+    \subsection{Q\&A}
+    
+    The following questions and answers can be found on the original site, but they're brought here for convenience (\href{https://aws.amazon.com/ec2/faqs/?nc1=h_ls#Instance_types}{source}).
+
+    \begin{table}[!htp]
+        \centering
+        \begin{tabular}{@{} p{30em} c @{}}
+            \toprule
+            \textbf{Questions} & \textbf{Page} \\
+            \midrule
+            What is Amazon EC2 F1? & \hyperlink{What is Amazon EC2 F1?}{\hypergetpageref{What is Amazon EC2 F1?}} \\ [.5em]
+            %
+            What are FPGAs and why do I need them? & \hyperlink{What are FPGAs and why do I need them?}{\hypergetpageref{What are FPGAs and why do I need them?}} \\ [.5em]
+            %
+            How does F1 compare with traditional FPGA solutions? & \hyperlink{How does F1 compare with traditional FPGA solutions?}{\hypergetpageref{How does F1 compare with traditional FPGA solutions?}} \\ [.5em]
+            %
+            What is an Amazon FPGA Image (AFI)? & \hyperlink{What is an Amazon FPGA Image (AFI)?}{\hypergetpageref{What is an Amazon FPGA Image (AFI)?}} \\ [.5em]
+            %
+            How do I list my hardware acceleration on the AWS Marketplace? & \hyperlink{How do I list my hardware acceleration on the AWS Marketplace?}{\hypergetpageref{How do I list my hardware acceleration on the AWS Marketplace?}} \\ [.5em]
+            %
+            What is available with F1 instances? & \hyperlink{What is available with F1 instances?}{\hypergetpageref{What is available with F1 instances?}} \\ [.5em]
+            %
+            Do I need to be an FPGA expert to use an F1 instance? & \hyperlink{Do I need to be an FPGA expert to use an F1 instance?}{\hypergetpageref{Do I need to be an FPGA expert to use an F1 instance?}} \\ [.5em]
+            %
+            I'm an FPGA developer; how do I get started with F1 instances? & \hyperlink{I'm an FPGA developer; how do I get started with F1 instances?}{\hypergetpageref{I'm an FPGA developer; how do I get started with F1 instances?}} \\ [.5em]
+            %
+            I'm not an FPGA developer; how do I get started with F1 instances? & \hyperlink{I'm not an FPGA developer; how do I get started with F1 instances?}{\hypergetpageref{I'm not an FPGA developer; how do I get started with F1 instances?}} \\ [.5em]
+            %
+            Does AWS provide a developer kit? & \hyperlink{Does AWS provide a developer kit?}{\hypergetpageref{Does AWS provide a developer kit?}} \\ [.5em]
+            %
+            Can I use the HDK in my on-premises development environment? & \hyperlink{Can I use the HDK in my on-premises development environment?}{\hypergetpageref{Can I use the HDK in my on-premises development environment?}} \\ [.5em]
+            %
+            Can I add an FPGA to any EC2 instance type? & \hyperlink{Can I add an FPGA to any EC2 instance type?}{\hypergetpageref{Can I add an FPGA to any EC2 instance type?}} \\ [.5em]
+            \bottomrule
+        \end{tabular}
+        \caption*{Table of contents of Q\&A. Click on the the page number to go to the question/answer.}
+    \end{table}
+
+    \begin{itemize}
+        \item[\ding{42}] 
+        \label{What is Amazon EC2 F1?}
+        \hypertarget{What is Amazon EC2 F1?}{\textbf{What is Amazon EC2 F1?}}
+        \begin{itemize}
+            \item[\ding{45}] Amazon EC2 F1 is a compute instance with programmable hardware you can use for application acceleration. The new F1 instance type provides a high performance, easy to access FPGA for developing and deploying custom hardware accelerations.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{What are FPGAs and why do I need them?}
+        \hypertarget{What are FPGAs and why do I need them?}{\textbf{What are FPGAs and why do I need them?}}
+        \begin{itemize}
+            \item[\ding{45}] FPGAs are programmable integrated circuits that you can configure using software. By using FPGAs you can accelerate your applications up to 30x when compared with servers that use CPUs alone. And, FPGAs are reprogrammable, so you get the flexibility to update and optimize your hardware acceleration without having to redesign the hardware.
+        \end{itemize}
+
+        \item[\ding{42}] 
+        \label{How does F1 compare with traditional FPGA solutions?}
+        \hypertarget{How does F1 compare with traditional FPGA solutions?}{\textbf{How does F1 compare with traditional FPGA solutions?}}
+        \begin{itemize}
+            \item[\ding{45}] F1 is an AWS instance with programmable hardware for application acceleration. With F1, you have access to FPGA hardware in a few simple clicks, reducing the time and cost of full-cycle FPGA development and scale deployment from months or years to days. While FPGA technology has been available for decades, adoption of application acceleration has struggled to be successful in both the development of accelerators and the business model of selling custom hardware for traditional enterprises, due to time and cost in development infrastructure, hardware design, and at-scale deployment. With this offering, customers avoid the undifferentiated heavy lifting associated with developing FPGAs in on-premises data centers.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{What is an Amazon FPGA Image (AFI)?}
+        \hypertarget{What is an Amazon FPGA Image (AFI)?}{\textbf{What is an Amazon FPGA Image (AFI)?}}
+        \begin{itemize}
+            \item[\ding{45}] The design that you create to program your FPGA is called an Amazon FPGA Image (AFI). AWS provides a service to register, manage, copy, query, and delete AFIs. After an AFI is created, it can be loaded on a running F1 instance. You can load multiple AFIs to the same F1 instance, and can switch between AFIs in runtime without reboot. This lets you quickly test and run multiple hardware accelerations in rapid sequence. You can also offer to other customers on the AWS Marketplace a combination of your FPGA acceleration and an AMI with custom software or AFI drivers.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{How do I list my hardware acceleration on the AWS Marketplace?}
+        \hypertarget{How do I list my hardware acceleration on the AWS Marketplace?}{\textbf{How do I list my hardware acceleration on the AWS Marketplace?}}
+        \begin{itemize}
+            \item[\ding{45}] You would develop your AFI and the software drivers/tools to use this AFI. You would then package these software tools/drivers into an Amazon Machine Image (AMI) in an encrypted format. AWS manages all AFIs in the encrypted format you provide to maintain the security of your code. To sell a product in the AWS Marketplace, you or your company must sign up to be an AWS Marketplace reseller, you would then submit your AMI ID and the AFI ID(s) intended to be packaged in a single product. AWS Marketplace will take care of cloning the AMI and AFI(s) to create a product, and associate a product code to these artifacts, such that any end-user subscribing to this product code would have access to this AMI and the AFI(s).
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{What is available with F1 instances?}
+        \hypertarget{What is available with F1 instances?}{\textbf{What is available with F1 instances?}}
+        \begin{itemize}
+            \item[\ding{45}] For developers, AWS is providing a Hardware Development Kit (HDK) to help accelerate development cycles, a FPGA Developer AMI for development in the cloud, an SDK for AMIs running the F1 instance, and a set of APIs to register, manage, copy, query, and delete AFIs. Both developers and customers have access to the AWS Marketplace where AFIs can be listed and purchased for use in application accelerations.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{Do I need to be an FPGA expert to use an F1 instance?}
+        \hypertarget{Do I need to be an FPGA expert to use an F1 instance?}{\textbf{Do I need to be an FPGA expert to use an F1 instance?}}
+        \begin{itemize}
+            \item[\ding{45}] AWS customers subscribing to an F1-optimized AMI from AWS Marketplace do not need to know anything about FPGAs to take advantage of the accelerations provided by the F1 instance and the AWS Marketplace. Simply subscribe to an F1-optimized AMI from the AWS Marketplace with an acceleration that matches the workload. The AMI contains all the software necessary for using the FPGA acceleration. Customers need only write software to the specific API for that accelerator and start using the accelerator.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{I'm an FPGA developer; how do I get started with F1 instances?}
+        \hypertarget{I'm an FPGA developer; how do I get started with F1 instances?}{\textbf{I'm an FPGA developer; how do I get started with F1 instances?}}
+        \begin{itemize}
+            \item[\ding{45}] Developers can get started on the F1 instance by creating an AWS account and downloading the AWS Hardware Development Kit (HDK). The HDK includes documentation on F1, internal FPGA interfaces, and compiler scripts for generating AFI. Developers can start writing their FPGA code to the documented interfaces included in the HDK to create their acceleration function. Developers can launch AWS instances with the FPGA Developer AMI. This AMI includes the development tools needed to compile and simulate the FPGA code. The Developer AMI is best run on the latest C5, M5, or R4 instances. Developers should have experience in the programming languages used for creating FPGA code (i.e. Verilog or VHDL) and an understanding of the operation they wish to accelerate.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{I'm not an FPGA developer; how do I get started with F1 instances?}
+        \hypertarget{I'm not an FPGA developer; how do I get started with F1 instances?}{\textbf{I'm not an FPGA developer; how do I get started with F1 instances?}}
+        \begin{itemize}
+            \item[\ding{45}] Customers can get started with F1 instances by selecting an accelerator from the AWS Marketplace, provided by AWS Marketplace sellers, and launching an F1 instance with that AMI. The AMI includes all of the software and APIs for that accelerator. AWS manages programming the FPGA with the AFI for that accelerator. Customers do not need any FPGA experience or knowledge to use these accelerators. They can work completely at the software API level for that accelerator.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{Does AWS provide a developer kit?}
+        \hypertarget{Does AWS provide a developer kit?}{\textbf{Does AWS provide a developer kit?}}
+        \begin{itemize}
+            \item[\ding{45}] Yes. The Hardware Development Kit (HDK) includes simulation tools and simulation models for developers to simulate, debug, build, and register their acceleration code. The HDK includes code samples, compile scripts, debug interfaces, and many other tools you will need to develop the FPGA code for your F1 instances. You can use the HDK either in an AWS provided AMI, or in your on-premises development environment. These models and scripts are available publicly with an AWS account.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{Can I use the HDK in my on-premises development environment?}
+        \hypertarget{Can I use the HDK in my on-premises development environment?}{\textbf{Can I use the HDK in my on-premises development environment?}}
+        \begin{itemize}
+            \item[\ding{45}] Yes. You can use the Hardware Development Kit HDK either in an AWS-provided AMI, or in your on-premises development environment.
+        \end{itemize}
+
+        \item[\ding{42}]
+        \label{Can I add an FPGA to any EC2 instance type?}
+        \hypertarget{Can I add an FPGA to any EC2 instance type?}{\textbf{Can I add an FPGA to any EC2 instance type?}}
+        \begin{itemize}
+            \item[\ding{45}] No. F1 instances comes in two instance sizes: f1.2xlarge, f1.4xlarge, and f1.16 xlarge.
+        \end{itemize}
+    \end{itemize}
+    
+    \newpage
 
     \subsection{The reason why you shouldn't choose the EC2 F1 Instances (for educational purposes)}
 
