@@ -53,13 +53,15 @@
 
     \newpage
 
-    \section{Introduction to AWS}
+    \section{Amazon}
+
+    \subsection{Introduction to AWS}
 
     This guide is designed to help some developers, and not, to explore the cloud technologies to learn how to program an FPGA (on cloud).
 
     \longline
     
-    \subsection{Register a new account}
+    \subsubsection{Register a new account}
 
     From this site you can register on the AWS platform: \url{https://aws.amazon.com/}. You can create an account choosing two possibility plans:
     \begin{itemize}
@@ -93,7 +95,7 @@
 
     \newpage
 
-    \subsection{Getting Started}
+    \subsubsection{Getting Started}
 
     The first thing to do to understand how AWS works is read the Getting Started guide: \url{https://aws.amazon.com/getting-started/}. In this site, you can find some useful guides that explain cloud functions and others Amazon products.\newline
 
@@ -111,9 +113,9 @@
     \noindent
     On the left side you can see all resources created and recently visited; at the top you can see all hypertext link that can help you to start.\newpage
 
-    \section{Amazon EC2 F1 Instances}
+    \subsection{Amazon EC2 F1 Instances}
 
-    \subsection{Description}
+    \subsubsection{Description}
 
     Amazon EC2 F1 instances use FPGAs to enable delivery of custom hardware accelerations. With F1 instances you can:
     \begin{itemize}
@@ -179,7 +181,7 @@
     \noindent
     *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html}{instance network bandwidth}.\newpage
 
-    \subsection{Amazon EC2 Pricing}
+    \subsubsection{Amazon EC2 Pricing}
     
     The following table is a summary of the prices available. The costs depend on which nation you choose.
 
@@ -275,7 +277,7 @@
 
     \longline
 
-    \subsection{Development Kit}\label{sec: development kit}
+    \subsubsection{Development Kit}\label{sec: development kit}
 
     Once you created an AWS account, you \textbf{must} downloading the AWS FPGA Development Kit by this official repository: \url{https://github.com/aws/aws-fpga}. It includes all documentation (\href{https://github.com/aws/aws-fpga#documentation-overview}{shortcut url}) on:
     \begin{itemize}
@@ -293,7 +295,7 @@
     \end{itemize}
     Again, this kit is \textbf{essential to develop fast FPGA for the EC2 F1 instances}.\newpage
 
-    \subsection{FPGA Developer AMI}\label{sec: FPGA Developer AMI}
+    \subsubsection{FPGA Developer AMI}\label{sec: FPGA Developer AMI}
 
     The FPGA Developer AMI is an Amazon Linux 2 based AMI provided by Amazon Web Services. The AMI is pre-built with FPGA development tools required to develop and use custom FPGAs for hardware acceleration. The FPGA Developer AMI includes Xilinx tools for simulating your FPGA design, compiling code and building your AFI (Amazon FPGA Image).\newline
 
@@ -309,7 +311,7 @@
     \noindent
     See more: \href{https://aws.amazon.com/marketplace/pp/prodview-iehshpgi7hcjg}{AWS marketplace}.\newpage
     
-    \subsection{Q\&A}
+    \subsubsection{Q\&A}
     
     The following questions and answers can be found on the original site, but they're brought here for convenience (\href{https://aws.amazon.com/ec2/faqs/?nc1=h_ls#Instance_types}{source}).
 
@@ -435,7 +437,7 @@
     
     \newpage
 
-    \subsection{The reason why you shouldn't choose the EC2 F1 Instances (for educational purposes)}
+    \subsubsection{The reason why you shouldn't choose the EC2 F1 Instances (for educational purposes)}
 
     The reason why you shouldn't choose the EC2 F1 Instances is quite simple: they're too expensive. If you are a student or a professor, this option is too much for a number of reasons:
     \begin{enumerate}
@@ -450,7 +452,7 @@
 
     \longline
 
-    \subsection{Some interesting blog posts \& articles}
+    \subsubsection{Some interesting blog posts \& articles}
 
     \begin{itemize}
         \item \href{https://aws.amazon.com/blogs/publicsector/university-of-berkeley-uses-aws-educate-for-amazon-fpga-accelerator-development-and-deployment-in-the-cloud/}{University of California, Berkeley uses AWS Educate and Amazon FPGA Instances in Undergraduate Computer Architecture Course} by AWS Public Sector Blog Team
