@@ -177,7 +177,98 @@
     * AVX and AVX2 are only available on instances launched with HVM AMIs.\newline
 
     \noindent
-    *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html}{instance network bandwidth}.
+    *** Instances marked with "Up to" Network Bandwidth have a baseline bandwidth and can use a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. For more information, see \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html}{instance network bandwidth}.\newpage
+
+    \subsection{Amazon EC2 Pricing}
+    
+    The following table is a summary of the prices available. The costs depend on which nation you choose.
+
+    \begin{table}[!htp]
+        \centering
+        \begin{tabular}{@{} p{5em} p{7em} p{10em} p{10em} @{}}
+            \toprule
+            \begin{center}
+                \textbf{Name}
+            \end{center}
+            & \begin{center}
+                \vspace{-1.5em}
+                \textbf{On-Demand Price/hr}
+                \vspace{-1em}
+            \end{center} 
+            & \begin{center}
+                \vspace{-1.5em}
+                \textbf{1-yr Reserved Instance Effective Hourly}
+                \vspace{-1em}
+            \end{center}
+            & \begin{center}
+                \vspace{-1.5em}
+                \textbf{3-yr Reserved Instance Effective Hourly}
+                \vspace{-1em}
+            \end{center} \\
+            \midrule
+            %
+            \begin{center}
+                \vspace{-1.9em}
+                \texttt{f1.2xlarge}
+            \end{center} &
+            \begin{center}
+                \vspace{-1.5em}
+                \$1.65
+            \end{center} & 
+            \begin{center}
+                \vspace{-1.5em}
+                \$1.06
+            \end{center} & 
+            \begin{center}
+                \vspace{-1.5em}
+                \$0.76
+            \end{center} \\
+            %
+            \begin{center}
+                \vspace{-2.5em}
+                \texttt{f1.4xlarge}
+            \end{center} &
+            \begin{center}
+                \vspace{-2em}
+                \$3.30
+            \end{center} & 
+            \begin{center}
+                \vspace{-2em}
+                \$2.12
+            \end{center} & 
+            \begin{center}
+                \vspace{-2em}
+                \$1.52
+            \end{center} \\
+            %
+            \begin{center}
+                \vspace{-2.5em}
+                \texttt{f1.16xlarge}
+                \vspace{-2em}
+            \end{center} &
+            \begin{center}
+                \vspace{-2em}
+                \$13.20
+                \vspace{-2em}
+            \end{center} & 
+            \begin{center}
+                \vspace{-2em}
+                \$8.50
+                \vspace{-2em}
+            \end{center} & 
+            \begin{center}
+                \vspace{-2em}
+                \$6.10
+                \vspace{-2em}
+            \end{center} \\
+            \bottomrule
+        \end{tabular}
+        \caption{Prices shown are for Linux/Unix in the US East (Northern Virginia) AWS Region and rounded to the nearest cent. Prices for 1-year and 3-year reserved instances are for "Partial Upfront" payment options.}
+        \label{tab: how much ec2 f1 costs}
+    \end{table}
+
+    \noindent
+    You can visit the price page for more details: \href{https://aws.amazon.com/ec2/pricing/}{click here}. Although Amazon says you can try EC2 F1 for free, this is untrue. Amazon allows you to use (for 750 hours) a virtual instance (a virtual resource) to give you a taste. Instead, Amazon EC2 F1 are dedicated instances (FPGA).
 
     \longline
 
