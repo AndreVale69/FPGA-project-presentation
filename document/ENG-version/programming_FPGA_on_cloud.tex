@@ -472,7 +472,7 @@
 
     \subsection{Azure Stack Edge Pro FPGA (Expired on February 2024)}
 
-    Microsoft provided an interesting service called \emph{Azure Stack Edge Pro FPGA}. In summary, it's an AI-enabled edge computing device with network data transfer capabilities. Unfortunately, these interesting devices will reach end-of-life in February 2024. If you are considering new deployments, Microsoft recommend that you explore Azure Stack Edge Pro 2 (section \ref{subsection: azure stack edge pro 2} page \pageref{subsection: azure stack edge pro 2}) or Azure Stack Edge Pro GPU (section \ref{subsection: azure stack edge pro gpu} page \pageref{subsection: azure stack edge pro gpu}) devices for your workloads.\newline
+    Microsoft provided an interesting service called \emph{Azure Stack Edge Pro FPGA}. In summary, it's an AI-enabled edge computing device with network data transfer capabilities. Unfortunately, these interesting devices will reach end-of-life in February 2024. If you are considering new deployments, Microsoft recommend that you explore Azure Stack Edge Pro 2 (section \ref{subsection: azure stack edge pro 2} page \pageref{subsection: azure stack edge pro 2}) or Azure Stack Edge Pro GPU (\href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-gpu-overview}{Azure Stack Edge Pro with GPU}) devices for your workloads.\newline
 
     \noindent
     Azure Stack Edge Pro with FPGA is a Hardware-as-a-service solution. Microsoft ships you a cloud-managed device with a built-in Field Programmable Gate Array (FPGA) that enables accelerated AI-inferencing and has all the capabilities of a network storage gateway.\newline
@@ -493,8 +493,38 @@
 
     \subsection{Azure Stack Edge Pro 2}\label{subsection: azure stack edge pro 2}
 
+    Azure Stack Edge Pro 2 is an evolution of Azure Stack Edge. It uses one or two GPU and is often used for rapid Machine Learning (ML) inferencing.\newline
+
+    \noindent
+    \emph{Azure Stack Edge Pro 2} is a new generation of an \textbf{AI-enabled edge computing device} offered as a service from Microsoft. It offers the following benefits over its precursor, the Azure Stack Edge Pro series:
+    \begin{itemize}
+        \item This series offers multiple models that closely align with your compute, storage, and memory needs. Depending on the model you choose, the compute acceleration could be via one or two Graphical Processing Units (GPU) on the device.
+        
+        \item This series has flexible form factors with multiple mounting options. These devices can be rack mounted, mounted on a wall, or even placed on a shelf in your office.
+        
+        \item These devices have low acoustic emissions and meet the requirements for noise levels in an office environment.
+    \end{itemize}
+    \begin{flushleft}
+        \textbf{\underline{Use cases}}
+    \end{flushleft}
+    The Pro 2 series is designed for deployment in edge locations such as retail, telecommunications, manufacturing, or even healthcare. Here are the various scenarios where Azure Stack Edge Pro 2 can be used for rapid Machine Learning (ML) inferencing at the edge and preprocessing data before sending it to Azure.
+    \begin{itemize}
+        \item \textbf{Inference with Azure Machine Learning} - With this solution, you can run ML models to get quick results that can be acted on before the data is sent to the cloud. The full data set can optionally be transferred to continue to retrain and improve your ML models. For more information, see how to \href{https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-fpga-web-service#deploy-to-a-local-edge-server}{Deploy Azure ML hardware accelerated models on Azure Stack Edge}.
+
+        \item \textbf{Preprocess data} - Transform data before sending it to Azure via compute options such as containerized workloads and Virtual Machines to create a more actionable dataset. Preprocessing can be used to:
+        \begin{itemize}
+            \item Aggregate data.
+            \item Modify data, for example, to remove personal data.
+            \item Subset data to optimize storage and bandwidth, or for further analysis.
+            \item Analyze and react to IoT Events.
+        \end{itemize}
+
+        \item \textbf{Transfer data over network to Azure} - Use this solution to easily and quickly transfer data to Azure to enable further compute and analytics or for archival purposes.
+    \end{itemize}
+
     \newpage
 
-    \subsection{Azure Stack Edge Pro GPU}\label{subsection: azure stack edge pro gpu}
+    \subsection{Azure Stack Edge Pricing}\label{subsection: azure stack edge pricing}
 
+    The devices seen in the previous chapters, can be ordered from the Azure Edge Hardware center. These devices are billed as a monthly service through the Azure portal. For more information, see \href{https://azure.microsoft.com/en-gb/pricing/details/azure-stack/edge/#pricing}{pricing}.
 \end{document}
