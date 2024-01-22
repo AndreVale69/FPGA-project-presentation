@@ -92,7 +92,7 @@
     \noindent
     Anyway, choosing a Free plan will automatic start an AWS Free Tier (\href{https://aws.amazon.com/free/terms/}{terms}). The 12 Month Free Tier is only available to new AWS customers, and is available for 12 months following your AWS sign-up date.
 
-    If you have not used the AWS resources provided under an Offer during the previous 3 months, we may reclaim those AWS resources after giving you 30 days’ notice. Even if your AWS resources are reclaimed, you may continue to participate in Offers using new AWS resources.
+    If you have not used the AWS resources provided under an Offer during the previous 3 months, we may reclaim those AWS resources after giving you 30 days' notice. Even if your AWS resources are reclaimed, you may continue to participate in Offers using new AWS resources.
 
     \newpage
 
@@ -347,7 +347,7 @@
             Can I add an FPGA to any EC2 instance type? & \hyperlink{Can I add an FPGA to any EC2 instance type?}{\hypergetpageref{Can I add an FPGA to any EC2 instance type?}} \\ [.5em]
             \bottomrule
         \end{tabular}
-        \caption*{Table of contents of Q\&A. Click on the the page number to go to the question/answer.}
+        \caption{Table of contents of Q\&A. Click on the the page number to go to the question/answer.}
     \end{table}
 
     \begin{itemize}
@@ -482,7 +482,7 @@
     Azure Data Box Edge is rebranded as Azure Stack Edge. You can find it in the marketplace on Azure Cloud Platform. Again, this product will expired, so you can order only Pro 2 or Pro GPU.\newline
 
     \noindent
-    In the following pages you can find the researches making to find what Microsoft offers. An interesting official documentation is available online at \href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-overview}{this link} or you can read the offline documentation findable in \texttt{resources} path in this project.
+    In the following pages you can find the researches making to find what Microsoft offers. An interesting official documentation is available online at \href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-overview}{this link} or you can read the offline documentation findable in \texttt{resources} path in this project (\href{https://github.com/AndreVale69/FPGA-project-presentation/blob/main/resources/Azure%20Stack%20Edge%20-%20Documentation.zip}{or online in my GitHub repository}).
 
     \begin{figure}[!htp]
         \centering
@@ -575,4 +575,100 @@
     \newpage
 
     \section{Intel}\label{section: Intel}
+
+    \subsection{Developer Clouds for Accelerated Computing}
+
+    \href{https://www.intel.com/content/www/us/en/developer/tools/devcloud/overview.html}{Developer Clouds for Accelerated Computing} is an online platform used to learn, prototype, test and run applications and workloads on a cluster of the latest Intel hardware and software.\newline
+
+    \noindent
+    It offers several configurations that are tuned to various workloads. From AI and inference training to FPGA development to edge prototyping and preproduction deployment, you can use the environment that best matches your business needs.
+    \begin{itemize}
+        \item Learn with hands-on tutorials.
+        \item Experiment with real-world code samples.
+        \item Evaluate performance and acceleration with multiple hardware configurations.
+        \item Build heterogeneous applications.
+        \item Develop your own prototype.
+        \item Benchmark your own AI workloads with always-on access to the latest AI hardware.
+    \end{itemize}
+    Available Intel Hardware:\newline
+
+    \noindent
+    \begin{minipage}{.18\textwidth}
+        \includegraphics[width=\textwidth]{img/xeon_logo.png}
+    \end{minipage}
+    \begin{minipage}{.18\textwidth}
+        \includegraphics[width=\textwidth]{img/xeon_max_series_logo.png}
+    \end{minipage}
+    \begin{minipage}{.18\textwidth}
+        \includegraphics[width=\textwidth]{img/data_center_gpu_flex_series_logo.png}
+    \end{minipage}
+    \begin{minipage}{.18\textwidth}
+        \includegraphics[width=\textwidth]{img/data_center_gpu_max_series_logo.png}
+    \end{minipage}
+    \begin{minipage}{.18\textwidth}
+        \includegraphics[width=\textwidth]{img/gaudi_logo.png}
+    \end{minipage}
+
+    \begin{itemize}
+        \item \href{https://www.intel.com/content/www/us/en/products/details/processors/xeon.html}{Intel Xeon Processors}
+        \item \href{https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu.html}{Intel Data Center GPU}
+        \item \href{https://www.intel.com/content/www/us/en/developer/articles/technical/habana-gaudi2-processor-for-deep-learning.html}{Gaudi 2} and Gaudi 3 (not yet released, \href{https://www.intel.com/content/www/us/en/newsroom/news/ai-everywhere-core-ultra-5th-gen-xeon-news.html}{official sneak peek})
+    \end{itemize}\newpage
+
+    \subsection{Build Multiarchitecture and FPGA Applications}
+
+    Intel allows you to test performance on CPU, GPU and FPGA architectures. But to do this, you need to log in to their platform \href{https://devcloud.intel.com/oneapi/home/}{Build Multiarchitecture and FPGA Applications}. Here you can get some information such as featured tools, frameworks and libraries, an exhaustive \href{https://devcloud.intel.com/oneapi/documentation/shell-commands/}{documentation} and a \href{https://devcloud.intel.com/oneapi/get_started/}{list of their products} given once you have done the registration.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=\textwidth]{img/Intel_DevCloud_for_oneAPI.png}
+        \caption{\href{https://devcloud.intel.com/oneapi/home/}{Build Multiarchitecture and FPGA Applications} (click \href{https://github.com/AndreVale69/FPGA-project-presentation/tree/main/document/ENG-version/img/Intel_DevCloud_for_oneAPI.png}{here} to see the image full screen)}
+    \end{figure}
+
+    \noindent
+    The following list only covers the toolkits used for FPGA purposes:
+    \begin{itemize}
+        \item \textbf{OpenCL for FPGA development}. Intel FPGA SDK for OpenCL software technology is a development environment that enables software developers to accelerate their applications by targeting heterogeneous platforms with Intel CPUs and FPGAs.
+        
+        Features offered:
+        \begin{itemize}
+            \item Microsoft Visual Studio or Eclipse-based Intel Code Builder for\newline OpenCL API now with FPGA support;
+
+            \item Fast FPGA emulation based on Intel's compiler technology;
+
+            \item Create OpenCL project jump-start wizard;
+            
+            \item Development Environment for both host (CPU) and accelerator\newline (FPGA);
+
+            \item Syntax highlighting and code auto-completion features;
+            
+            \item FPGA resource and performance analysis;
+            
+            \item Fast and incremental FPGA compile.
+        \end{itemize}
+        This is the link to the \href{https://github.com/intel/FPGA-Devcloud/tree/master/main/QuickStartGuides/OpenCL_Program_PAC_Quickstart}{GitHub repository} to get started with a first sample.
+
+        \item \textbf{RTL Acceleration Functional Unit}. The Intel Quartus Prime Design Software includes everything you need to design for Intel FPGAs, SoCs, and complex programmable logic device (CPLD) from design entry and synthesis to optimization, verification, and simulation. Dramatically increased capabilities on devices with multi-million logic elements are providing designers with the ideal platform to meet next-generation design opportunities.
+
+        Build and design using standard logic gates. Great for visualization and education.
+
+        This the link to the \href{https://github.com/intel/FPGA-Devcloud/tree/master/main/QuickStartGuides/RTL_AFU_Program_PAC_Quickstart}{GitHub repository} to get started with a first sample.
+    \end{itemize}
+
+    \longline
+
+    \subsubsection{Create an account}
+
+    To create an account click on the \href{https://www.intel.com/content/www/us/en/secure/forms/devcloud/enrollment.html}{\emph{Get Free Access}} button. This will take you to a login/register page. You can also enter a personal email here, as Intel's services don't check this (I can't find any resources that say a personal email is not allowed).
+
+    Once you have entered your email and password, and confirmed the email with a code, Intel will ask you a few questions when you log in:
+    \begin{itemize}
+        \item Information about yourself:
+        \begin{itemize}
+            \item Business or Institution Name.
+            \item What type of user are you? The possibility are: researcher, student, teacher/professor, etc.
+        \end{itemize}
+
+        \item Read and accept Intel Developer Cloud Terms and Conditions (available offline in \texttt{resources} path or \href{https://github.com/AndreVale69/FPGA-project-presentation/tree/main/resources/Intel%20Developer%20Cloud%20-%20Terms%20and%20Conditions.pdf}{online at my GitHub repository})
+    \end{itemize}
 \end{document}
