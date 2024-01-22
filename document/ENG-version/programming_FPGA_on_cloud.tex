@@ -18,6 +18,7 @@
 \usepackage{gensymb}				% degree symbol
 \usepackage[x11names]{xcolor}		% RGB colors pack.
 \usepackage{tcolorbox}				% color box text
+\usepackage{eurosym}
 
 % draw a frame around given text
 \newcommand{\framedtext}[1]{%
@@ -472,7 +473,7 @@
 
     \subsection{Azure Stack Edge Pro FPGA (Expired on February 2024)}
 
-    Microsoft provided an interesting service called \emph{Azure Stack Edge Pro FPGA}. In summary, it's an AI-enabled edge computing device with network data transfer capabilities. Unfortunately, these interesting devices will reach end-of-life in February 2024. If you are considering new deployments, Microsoft recommend that you explore Azure Stack Edge Pro 2 (section \ref{subsection: azure stack edge pro 2} page \pageref{subsection: azure stack edge pro 2}) or Azure Stack Edge Pro GPU (\href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-gpu-overview}{Azure Stack Edge Pro with GPU}) devices for your workloads.\newline
+    Microsoft provided an interesting service called \href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-overview}{Azure Stack Edge Pro FPGA}. In summary, it's an AI-enabled edge computing device with network data transfer capabilities. Unfortunately, these interesting devices will reach end-of-life in February 2024. If you are considering new deployments, Microsoft recommend that you explore Azure Stack Edge Pro 2 (section \ref{subsection: azure stack edge pro 2} page \pageref{subsection: azure stack edge pro 2}) or Azure Stack Edge Pro GPU (\href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-gpu-overview}{Azure Stack Edge Pro with GPU}) devices for your workloads.\newline
 
     \noindent
     Azure Stack Edge Pro with FPGA is a Hardware-as-a-service solution. Microsoft ships you a cloud-managed device with a built-in Field Programmable Gate Array (FPGA) that enables accelerated AI-inferencing and has all the capabilities of a network storage gateway.\newline
@@ -493,7 +494,7 @@
 
     \subsection{Azure Stack Edge Pro 2}\label{subsection: azure stack edge pro 2}
 
-    Azure Stack Edge Pro 2 is an evolution of Azure Stack Edge. It uses one or two GPU and is often used for rapid Machine Learning (ML) inferencing.\newline
+    \href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-pro-2-overviewURL}{Azure Stack Edge Pro 2} is an evolution of Azure Stack Edge. It uses one or two GPU and is often used for rapid Machine Learning (ML) inferencing.\newline
 
     \noindent
     \emph{Azure Stack Edge Pro 2} is a new generation of an \textbf{AI-enabled edge computing device} offered as a service from Microsoft. It offers the following benefits over its precursor, the Azure Stack Edge Pro series:
@@ -526,11 +527,52 @@
 
     \subsection{Azure Stack Edge Pricing}\label{subsection: azure stack edge pricing}
 
-    The devices seen in the previous chapters, can be ordered from the Azure Edge Hardware center. These devices are billed as a monthly service through the Azure portal. For more information, see \href{https://azure.microsoft.com/en-gb/pricing/details/azure-stack/edge/#pricing}{pricing}.
+    The devices seen in the previous chapters, can be ordered from the \href{https://learn.microsoft.com/en-us/azure/azure-edge-hardware-center/azure-edge-hardware-center-overview}{Azure Edge Hardware center}. These devices are billed as a monthly service through the Azure portal. For more information, see \href{https://azure.microsoft.com/en-gb/pricing/details/azure-stack/edge/#pricing}{pricing}.
+
+    \begin{table}[!htp]
+        \centering
+        \begin{tabular}{@{} l p{10em} l @{}}
+            \toprule
+            \textbf{Service} & \textbf{Unit} & \textbf{Price} \\
+            \midrule
+            Monthly subscription fee & 1 unit with GPU & \textbf{\geneuro646} \\
+            \\
+            %
+            Monthly subscription fee & 1 unit with 2 GPUs & \textbf{\geneuro811} \\
+            \\
+            %
+            Monthly subscription fee & 1 unit with FPGA & Expired \\
+            \\
+            %
+            Shipping - US & 1 unit & \textbf{\geneuro316} \\ \\
+            Shipping - EMEA & 1 unit & \textbf{\geneuro316} \\ \\
+            Shipping - APAC & 1 unit & \textbf{\geneuro316} \\ \\
+            Shipping - Americas & 1 unit & \textbf{\geneuro316} \\
+            \bottomrule
+        \end{tabular}
+        \caption{\href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-overview}{Azure Stack Edge Pro FPGA}}
+    \end{table}
+    \begin{table}[!htp]
+        \begin{tabular}{@{} l p{18em} l @{}}
+            \toprule
+            \textbf{Service} & \textbf{Unit} & \textbf{Price} \\
+            \midrule
+            Monthly subscription fee & Model: 64G2T\newline 32 vCPUs, 51 GB RAM, 720 GB & \textbf{\geneuro359} \\
+            \\
+            %
+            Monthly subscription fee & Model: 128G4T1GPU\newline 32 vCPUs, 102 GB RAM, 1.6 TB, 1 x NVIDIA A2 GPU & \textbf{\geneuro469} \\
+            \\
+            %
+            Monthly subscription fee & Model: 256G6T2GPU\newline 32 vCPUs, 204 GB RAM, 2.5 TB, 2 x NVIDIA A2 GPUs & \textbf{\geneuro554} \\
+            \\
+            %
+            Shipping & 1 unit & \textbf{\geneuro316} \\
+            \bottomrule
+        \end{tabular}
+        \caption{\href{https://learn.microsoft.com/en-us/azure/databox-online/azure-stack-edge-pro-2-overviewURL}{Azure Stack Edge Pro 2}}
+    \end{table}
 
     \newpage
 
     \section{Intel}\label{section: Intel}
-
-    
 \end{document}
