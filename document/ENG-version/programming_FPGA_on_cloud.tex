@@ -58,10 +58,6 @@
     \section{Amazon}
 
     \subsection{Introduction to AWS}
-
-    This guide is designed to help some developers, and not, to explore the cloud technologies to learn how to program an FPGA (on cloud).
-
-    \longline
     
     \subsubsection{Register a new account}
 
@@ -189,7 +185,7 @@
 
     \begin{table}[!htp]
         \centering
-        \begin{tabular}{@{} p{5em} p{7em} p{10em} p{10em} @{}}
+        \begin{tabular}{@{} p{5em} p{7em} p{9.5em} p{9.5em} @{}}
             \toprule
             \begin{center}
                 \textbf{Name}
@@ -439,21 +435,6 @@
     
     \newpage
 
-    \subsubsection{The reason why you shouldn't choose the EC2 F1 Instances (for educational purposes)}
-
-    The reason why you shouldn't choose the EC2 F1 Instances is quite simple: they're too expensive. If you are a student or a professor, this option is too much for a number of reasons:
-    \begin{enumerate}
-        \item As mentioned in table \ref{tab: the specifications of each type of EC2 F1 Instances} on page \pageref{tab: the specifications of each type of EC2 F1 Instances}, the computational power of each type of F1 is too much for a beginner that is learning how to program an FPGA. It's like saying: \dquotes{I don't have a driving licence, so I should drive a Ferrari to train for the exam}.
-
-        \item Although you can create a free account with 750 hours on EC2, you can't get the access to an EC2 F1 Instance(s) unless you pay a huge amount of money:
-        \begin{figure}[!htp]
-            \centering
-            \includegraphics[width=.6\textwidth]{img/f1_costs.png}
-        \end{figure}
-    \end{enumerate}
-
-    \longline
-
     \subsubsection{Some interesting blog posts \& articles}
 
     \begin{itemize}
@@ -466,6 +447,94 @@
         \item \href{https://aws.amazon.com/blogs/compute/bringing-datacenter-scale-hardware-software-co-design-to-the-cloud-with-firesim-and-amazon-ec2-f1-instances/}{Bringing Datacenter-Scale Hardware-Software Co-design to the Cloud with FireSim and Amazon EC2 F1 Instances} by Mia Champion
 
         \item \href{https://aws.amazon.com/blogs/compute/accelerating-precision-medicine-at-scale/}{Accelerating Precision Medicine at Scale} by Aaron Friedman and Angel Pizarro
+    \end{itemize}\newpage
+
+    \subsection{AWS Educate Classrooms}
+
+    AWS Educate Classrooms now support Amazon EC2 F1 instances. Educators now no longer have to rely on students having to create their own AWS accounts for developing hardware accelerators.\newline
+
+    \noindent
+    You can instead create no-cost AWS Educate classroom accounts for students to learn about the cloud in a hands-on environment.\newline
+
+    \noindent
+    \textbf{Note}: AWS Classrooms are meant for instructional use only (AWS Educate terms and conditions). Faculty interested in using F1 instances for research should apply for AWS Cloud Credits for Research.\newline
+
+    \noindent
+    The following link covers how educators can request access to AWS Educate Classroom to enable students to develop custom hardware accelerators on field programmable gate arrays (FPGAs) as part of their coursework: \href{https://github.com/aws-samples/aws-fpga-classroom-setup/blob/main/README.md}{Quick Start Guide for Amazon EC2 F1 Instances}.\newline
+
+    \noindent
+    Useful resources:
+    \begin{itemize}
+        \item \href{https://github.com/aws/aws-fpga/}{AWS FPGA Developer Kit}
+        \item \href{https://forums.aws.amazon.com/forum.jspa?forumID=243&start=0}{AWS FPGA Developer Support Forums}
+        \item \href{https://aws.amazon.com/ec2/instance-types/f1/}{Amazon EC2 F1 Instance Product Details}
+        \item FPGA Developer AMI:
+        \begin{itemize}
+            \item \href{https://aws.amazon.com/marketplace/pp/B06VVYBLZZ}{Centos 7}
+            \item \href{https://aws.amazon.com/marketplace/pp/B08NTMMZ7X}{Amazon Linux 2}
+        \end{itemize}
+    \end{itemize}
+    Some \href{https://github.com/aws-samples/aws-fpga-classroom-setup/blob/main/FAQ.md}{interesting questions}:
+    \begin{itemize}
+        \item[\ding{42}] \textbf{Why use F1 Instances in classes?}
+        \begin{itemize}
+            \item[\ding{45}] For three reasons:
+            \begin{itemize}
+                \item As many courses are being delivered remotely, educators are running into challenges setting up computer science and system design courses, which typically require access to on-campus facilities. Access to FPGAs in AWS provides a convenient and scalable solution for students.
+                
+                \item Educators can use programmable hardware (FPGA) on-demand without the need for purchasing expensive hardware that may not be fully utilized.
+
+                \item AWS offers students access to the latest cloud technology, and experience with it can help them secure a job upon graduating.
+            \end{itemize}
+        \end{itemize}
+
+        \item[\ding{42}] \textbf{Why does the use of F1 instances in AWS Classroom require educators to create an AMI?}
+        \begin{itemize}
+            \item[\ding{45}] Users of AWS Educate Classrooms cannot access AWS Marketplace, which offers the FPGA Developer AMI developed by AWS. Educators will need to create an AMI with the FPGA developer tools and licenses themselves in order to use F1 instances inside AWS Educate Classrooms.
+        \end{itemize}
+
+        \item[\ding{42}] \textbf{Is AWS Educate Classrooms mandatory if educators want to use F1 instances?}
+        \begin{itemize}
+            \item[\ding{45}] Use of F1 instances within AWS Educate Classrooms is not mandatory. Educators can still choose to use standard AWS accounts with F1 instances and the FPGA Developer AMI available from the AWS Marketplace. AWS Organizations can be leveraged to benefit from consolidated billing and centralized access control to AWS services and resources. The main differences when comparing to AWS Educate Classrooms are summarized in the table below.
+
+            \begin{table}[!htp]
+                \centering
+                \begin{tabular}{@{} p{12em} p{8em} p{8em} @{}}
+                    \toprule
+                    & \textbf{Standard AWS Account} & \textbf{Classroom}\newline \textbf{Account} \\
+                    \midrule
+                    F1 Instance Availability     & Several Regions & Northern Virginia Only \\ \\
+                    AWS Marketplace Access       & Yes             & No \\ \\
+                    Account requires Credit Card & Yes             & Yes \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+        \end{itemize}
+
+        \item[\ding{42}] \textbf{How to obtain licenses for Xilinx Vivado Design Suite}
+        \begin{itemize}
+            \item[\ding{45}] Follow the steps below:
+            \begin{enumerate}
+                \item The course instructor will need to first create an account through \href{http://www.xilinx.com}{Xilinx's website};
+
+                \item The course instructor will then need to join the \href{https://www.xilinx.com/member/forms/registration/xup.html}{Xilinx University Program}. Registration may take 2 business days and requires a valid email address from an academic institution.
+
+                \item Once the Xilinx University Program account has been approved, \href{https://www.xilinx.com/member/forms/registration/xup_donation_request.html}{submit a donation request for licenses} (in multiples of 25) on behalf of the students taking the course.
+                
+                \textbf{Note}: this process may take up to 3 weeks but usually completes within a few days.
+
+                Please email: \href{f1Educator@amazon.com}{f1Educator@amazon.com} to inform the AWS Educate and Amazon EC2 F1 instance teams when facing any delay.
+            \end{enumerate}
+        \end{itemize}
+
+        \item[\ding{42}] \textbf{How to delete the AMI once the course is over}
+        \begin{itemize}
+            \item[\ding{45}] There is a small cost associated with storing the AMI, and it is best practice to remove it when the course is complete. This avoids many small charges depleting credits in your AWS Classroom accounts.
+
+            To delete the AMI, \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/deregister-ami.html#clean-up-ebs-ami}{follow these instructions}.
+            
+            \textbf{Note}: Once deleted an AMI cannot be restored. You will need to rebuild the AMI using \href{https://github.com/aws-samples/aws-fpga-classroom-setup/blob/main/README.md}{these instructions}.
+        \end{itemize}
     \end{itemize}
 
     \newpage
