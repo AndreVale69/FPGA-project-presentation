@@ -18,7 +18,8 @@
 \usepackage{gensymb}				% degree symbol
 \usepackage[x11names]{xcolor}		% RGB colors pack.
 \usepackage{tcolorbox}				% color box text
-\usepackage{eurosym}
+\usepackage{eurosym}                % different types of €
+\usepackage{csquotes}
 
 % draw a frame around given text
 \newcommand{\framedtext}[1]{%
@@ -615,7 +616,7 @@
         \item \href{https://www.intel.com/content/www/us/en/developer/articles/technical/habana-gaudi2-processor-for-deep-learning.html}{Gaudi 2} and Gaudi 3 (not yet released, \href{https://www.intel.com/content/www/us/en/newsroom/news/ai-everywhere-core-ultra-5th-gen-xeon-news.html}{official sneak peek})
     \end{itemize}\newpage
 
-    \subsection{Build Multiarchitecture and FPGA Applications}
+    \subsection{Build Multiarchitecture and FPGA Applications}\label{subsection: build multiarchitecture and FPGA applications}
 
     Intel allows you to test performance on CPU, GPU and FPGA architectures. But to do this, you need to log in to their platform \href{https://devcloud.intel.com/oneapi/home/}{Build Multiarchitecture and FPGA Applications}. Here you can get some information such as featured tools, frameworks and libraries, an exhaustive \href{https://devcloud.intel.com/oneapi/documentation/shell-commands/}{documentation} and a \href{https://devcloud.intel.com/oneapi/get_started/}{list of their products} given once you have done the registration.
 
@@ -657,7 +658,7 @@
 
     \longline
 
-    \subsubsection{Create an account}
+    \subsubsection{Create an account}\label{subsubsection: build multiarchitecture and FPGA applications - create an account}
 
     To create an account click on the \href{https://www.intel.com/content/www/us/en/secure/forms/devcloud/enrollment.html}{\emph{Get Free Access}} button. This will take you to a login/register page. You can also enter a personal email here, as Intel's services don't check this (I can't find any resources that say a personal email is not allowed).
 
@@ -670,5 +671,166 @@
         \end{itemize}
 
         \item Read and accept Intel Developer Cloud Terms and Conditions (available offline in \texttt{resources} path or \href{https://github.com/AndreVale69/FPGA-project-presentation/tree/main/resources/Intel%20Developer%20Cloud%20-%20Terms%20and%20Conditions.pdf}{online at my GitHub repository})
+    \end{itemize}
+    Your account will then be ready to access Intel resources. On the main screen you will see the \emph{expiration date} at the top right. Normally each account has a duration of 3/4 months, but you can request an extension.
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=\textwidth]{img/expiration_date_intel.png}
+        \caption{Expiration date info.}
+    \end{figure}\newpage
+
+    \subsection{Intel FPGA Academic Program}
+
+    On the 21th October 2020, \href{https://ece.ucdavis.edu/directory/lance-halstead}{Lance Halsted}, a senior development engineer working with \href{https://ece.ucdavis.edu/directory/venkatesh-akella}{Venkatesh Akella} (\href{https://scholar.google.com/citations?hl=it&user=onJXki0AAAAJ}{Google Scholar profile}), a professor of Electrical \& Computer Engineering at the University of California (Davis), asks the following question:
+    \begin{displayquote}
+        Hello,\vspace{.5em}
+
+        We are interested in migrating a course that we currently teach using DE10-Lite boards to something Cloud-based. Prof. Venkatesh Akella will be teaching EEC180 in Winter Quarter, starting Jan. 4, and would like to find out if we can join the FPGA Cloud Program so our students can access FPGA boards remotely.\vspace{.5em}
+
+        Thanks,\newline
+        Lance Halsted\newline
+        Development Engineer\newline
+        UC Davis
+    \end{displayquote}
+    And a moderator answered:
+    \begin{displayquote}
+        Hi,\vspace{.5em}
+
+        FPGA Cloud Program are mostly for acceleration, after you evaluate, you can sign up in here:
+        \href{https://software.intel.com/content/www/us/en/develop/topics/fpga-academic.html?}{Intel FPGA Academic Program}.
+
+        Click on learn more $\rightarrow$ sign up.
+
+        Alternatively, you can use the Remote Education.
+
+        Click on learn more (same link above).
+    \end{displayquote}
+    This is the \href{https://community.intel.com/t5/Intel-FPGA-University-Program/FPGA-Cloud-Program-Remote-Education/m-p/1219913}{link of the discussion}.\newline
+
+    \noindent
+    Using the same account you have created in the par. \ref{subsubsection: build multiarchitecture and FPGA applications - create an account}, you can log in to this site. There are many links here:
+    \begin{itemize}
+        \item \href{https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/membership.html}{Membership}. Join the program to obtain access to hardware and software resources for research and teaching.
+
+        \item \href{https://cdrdv2.intel.com/v1/dl/getContent/685254}{Teach with Intel FPGAs Training Aid Catalog}. Explore all aspects of the Intel FPGA Academic Program including coursework, FPGA development tools and boards, discounts, and board donations.
+        
+        \item \href{https://www.intel.com/content/www/us/en/developer/tools/devcloud/overview.html}{Intel Developer Cloud} (the same content that you can see in the par. \ref{subsection: build multiarchitecture and FPGA applications}). Get free access to the most advanced and leading-edge Intel FPGA technologies with a new cloud environment for students, teachers, and researchers.
+        
+        \item Remote Education (\href{https://github.com/intel/FPGA-Devcloud/tree/master/main/HandsFree}{Hardware Remote Console} or \href{https://github.com/fpgacademy/DESim}{Simulator Remote Console}). For offsite teaching, Intel offers two remote console methods. Use either Intel FPGA Development Kits in a virtualized environment or use the ModelSim simulator in place of the actual FPGA hardware. Create a project, add RTL code, compile, interact, and display results via a console interface that does not require extensive testbenches or waveform views.
+        
+        \item \href{https://labsland.com/web/intel}{Remote Access to FPGA Lab}. Access Intel FPGA boards remotely through LabsLand.
+        
+        \item \href{https://plan.seek.intel.com/fpga-academic}{Intel FPGA Academic Newsletter}. Stay up to date with university program news and industry trends for Intel FPGAs. Get emails with information about upcoming workshops, Intel's latest resources for academia, industry updates, and more.
+    \end{itemize}
+    There is also some interesting material on Intel FPGAs through a curriculum created by university professors, which includes videos, lecture slides and lab manuals.
+
+    \longline
+
+    \subsubsection{Membership}
+
+    \href{https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/membership.html}{Membership} is an opportunity to join the programme and gain access to hardware and software resources for research and teaching.\newline
+
+    \noindent
+    What you get:
+    \begin{itemize}
+        \item Request donations of design software licenses and hardware;
+        \item Request solutions and source material for FPGA-based lab exercises;
+        \item Get priority access to Intel Developer Cloud for FPGA for academics.
+    \end{itemize}
+    Who Is Eligible:
+    \begin{itemize}
+        \item Faculty and staff members from any university, college, or not-for-profit research institute.
+    \end{itemize}
+    How to Apply:
+    \begin{itemize}
+        \item Create a MyIntel account (if you do not already have one) \textbf{using your academic email address} (the same steps can be found in par. \ref{subsubsection: build multiarchitecture and FPGA applications - create an account} but using an academic email).
+
+        \item \href{https://www.intel.com/content/www/us/en/secure/forms/developer/fpga-academic-enrollment/request.html}{Complete the membership request form}. You can find a copy of the form in the \texttt{resources} path of this project (or online at this \href{https://github.com/AndreVale69/FPGA-project-presentation/tree/main/resources/Apply%20for%20membership%20-%20Intel.pdf}{link}).
+    \end{itemize}\newpage
+
+    \subsubsection{Teach with Intel FPGAs Training Aid Catalog}
+
+    At \href{https://cdrdv2.intel.com/v1/dl/getContent/685254}{this link} you can find 47 slides where they speaks about:
+    \begin{itemize}
+        \item Program history
+        \item Undergraduate EE coursework
+        \item Graduate EE coursework
+        \item Dev Kits \& HW available (donation \& reduce price)
+        \item New remote learning framework
+        \item FPGA cloud - free
+        \item Workshops / Training - Host a Workshop
+    \end{itemize}
+    \textbf{Note:} there are links in some slides that do not work, so go to par. \ref{subsubsection: intel - materials} to view the resources.\newline
+
+    \noindent
+    A summary of the slides. The FPGA University Program was launched in 2006 by Professor Stephen Brown from the University of Toronto. The slides spoke about Intel Quartus, a development suite used to create the design of an Intel FPGA and much more. A small presentation of their "soft" processor, \href{https://ftp.intel.com/Public/Pub/fpgaup/pub/Teaching_Materials/current/Tutorials/Nios2_introduction.pdf}{Intel Nios II}, and a section's table of contents will be viewed on the platform.
+
+    At the end, there is a section to submit a proposal for free hardware for teaching or academic research and an introduction to Intel FPGA Academic Clouds.\newpage
+
+    \subsubsection{Remote Education}
+
+    Intel offers two remote console methods: \href{https://github.com/intel/FPGA-Devcloud/tree/master/main/HandsFree}{Hardware Remote Console} or \href{https://github.com/fpgacademy/DESim}{Simulator Remote Console}.
+
+    \begin{flushleft}
+        \textbf{\underline{Hardware Remote Console}}
+    \end{flushleft}
+    The Remote Console application provides a means for university students to perform remote GPIO-based FPGA lab assignments. Remote Console requires a university or organization to set up a development kit host. Students (with VPN privileges) access the hosted development kits as clients. The Remote Console application provides a user-friendly GUI that depicts the status of a connected FPGA's memory-mapped I/O, providing an immersive lab experience.\newline
+
+    \noindent
+    \textbf{Note:} even if your development kit is not listed below, it can still support the Remote Console application. See the adapting non-supported development kits section.\newline
+
+    \noindent
+    \textbf{Currently supported development kit GUIs}:
+    \begin{itemize}
+        \item DE10-Lite (MAX 10)
+        \item DE2-115 (Cyclone IV)
+    \end{itemize}
+    \textbf{Development kit GUIs Coming Soon}:
+    \begin{itemize}
+        \item DE1-SoC
+        \item DE0-CV
+    \end{itemize}
+    \textbf{Remote Console client requirements}:
+    \begin{itemize}
+        \item A Windows 10 machine with Quartus Prime Lite or Quartus Prime Programmer and Tools 18.1 and above.
+        \item VPN or virtual desktop interface (VDI) access privileges to the development kit host machine.
+        \item Login credentials for specific development kit (not applicable in VDI implementation).
+    \end{itemize}
+    \textbf{Remote Console host requirements} (almost one of them):
+    \begin{itemize}
+        \item Linux machine (Ubuntu 18.04 tested) with Quartus Programmer and Tools 18.1 and above.
+        \item A group of VDI capable-machines, each hosting Quartus Prime Lite 18.1 and above, and the Remote Console application.
+    \end{itemize}\newpage
+
+    \begin{flushleft}
+        \textbf{\underline{Simulator Remote Console}}
+    \end{flushleft}
+    The DESim application provides a graphical user interface (GUI) that represents some of the features of a DE1-SoC board. This GUI serves as a \dquotes{front end} for the ModelSim simulator. Using the DESim GUI you can invoke both the ModelSim Verilog compiler and simulator. Inputs to the ModelSim simulator can be provided by clicking on features in the DESim GUI, which also shows results produced by the simulator on displays that look like the ones on a DE1-SoC board.\newline
+
+    \noindent
+    The DESim tool has four parts:
+    \begin{enumerate}
+        \item Documentation in the form of an installation guide, and a user tutorial;
+        \item The frontend graphical user interface;
+        \item The backend simulator interface;
+        \item Various demos showcasing the different capabilities of the tool.
+    \end{enumerate}
+    The DESim tool requires the ModelSim HDL simuator. Preferably, one of the ModelSim-Intel FPGA editions, which has the Intel FPGA IP Core simulation models built-in.
+    
+    \longline
+
+    \subsubsection{Materials}\label{subsubsection: intel - materials}
+
+    In \href{https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/materials.html}{this page} you can find some useful materials:
+    \begin{itemize}
+        \item \href{https://fpgacademy.org/tutorials.html}{Tutorials}. These tutorials are intended for self-study by students. They cover FPGA boards, software tools (including the Intel Quartus Prime Software tools, the Nios II, and ARM processors), and other topics.
+        
+        \item \href{https://fpgacademy.org/courses.html}{Lab Exercises}. The Intel FPGA Academic Program provides lab exercises for several university-level courses. As an aid for instructors, a complete solution for each lab exercise is available. Unformatted text versions of these exercises and the source files for the figures are also available.
+
+        \item \href{https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/materials-computer-systems.html}{Computer Systems}. These examples of computer systems are designed for use on DE-series boards. They are based on the Nios II processor or the ARM Cortex-A9 processor and the Intel FPGA Academic Program intellectual property (IP) cores. These systems can be used to teach computer organization and embedded systems without requiring knowledge of hardware design.
+
+        \item \href{https://fpgacademy.org/tools.html}{Software}. The Intel FPGA University Program provides licenses for the complete suite of software tools required.
+
+        \item \href{https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/materials-workshops.html}{Workshops}. These project-based workshops contain basic exercises to design custom logic on Intel FPGA technology.
     \end{itemize}
 \end{document}
